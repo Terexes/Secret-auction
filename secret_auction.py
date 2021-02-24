@@ -1,11 +1,11 @@
 import os
+import platform
+
 from art import logo
-# To clear the console for next bid (windows users)
-def clear(): return os.system('cls')
 
 
-# To clean the console for next bid (ubuntu)
-#def clear(): return os.system(clear)
+def clear():
+    return os.system("clear") if platform.system() in ['Linux', 'Darwin'] else os.system("cls")
 
 
 clear()
